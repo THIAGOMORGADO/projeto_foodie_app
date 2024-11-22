@@ -6,7 +6,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Input from "../../components/Input";
 import Categories from "../../components/Categories";
 
-import { categorias } from "../../constants/dados.js";
+import { banners, categorias } from "../../constants/dados.js";
+import Banners from "../../components/Banners";
 
 export default function Home() {
   const [search, setSearch] = useState("");
@@ -25,9 +26,9 @@ export default function Home() {
         />
       </View>
 
-      <View>
-        <Categories dados={categorias} />
-      </View>
+      <Categories dados={categorias} />
+
+      <Banners dados={banners} />
     </SafeAreaView>
   );
 }
