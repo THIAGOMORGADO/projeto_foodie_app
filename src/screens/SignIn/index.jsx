@@ -42,6 +42,7 @@ export function Login(props) {
                 placeholder="Digite seu email..."
                 onChangeText={(e) => setEmail(e)}
                 value={email}
+                Type="email-address"
               />
             </View>
 
