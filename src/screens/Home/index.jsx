@@ -6,6 +6,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Input from "../../components/Input";
 import Categories from "../../components/Categories";
 
+import { categorias } from "../../constants/dados.js";
+
 export default function Home() {
   const [search, setSearch] = useState("");
   return (
@@ -24,7 +26,7 @@ export default function Home() {
       </View>
 
       <View>
-        <Categories />
+        <Categories dados={categorias} />
       </View>
     </SafeAreaView>
   );
