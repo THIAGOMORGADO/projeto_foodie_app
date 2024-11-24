@@ -10,7 +10,7 @@ const MainStack = createNativeStackNavigator();
 export default function MainStacksRoutes() {
   return (
     <MainStack.Navigator
-      initialRouteName="Favorites"
+      initialRouteName="Home"
       headerMode="screen"
       backButtonEnabled={false}
       screenOptions={{

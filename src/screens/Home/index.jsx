@@ -26,11 +26,11 @@ export default function Home() {
           value={search}
         />
       </View>
+
+      <Categories dados={categorias} />
+
+      <Banners dados={banners} />
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Categories dados={categorias} />
-
-        <Banners dados={banners} />
-
         {restaurantes.map((restaurante, index) => {
           return (
             <View key={index}>
