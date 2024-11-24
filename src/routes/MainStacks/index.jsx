@@ -4,13 +4,14 @@ import { Registro } from "../../screens/SignUp";
 import { Registro2 } from "../../screens/SignUp2";
 import Home from "../../screens/Home";
 import Favorites from "../../screens/Favorites";
+import Pedidos from "../../screens/Pedidos";
 
 const MainStack = createNativeStackNavigator();
 
 export default function MainStacksRoutes() {
   return (
     <MainStack.Navigator
-      initialRouteName="Home"
+      initialRouteName="Pedidos"
       headerMode="screen"
       backButtonEnabled={false}
       screenOptions={{
@@ -55,13 +56,16 @@ export default function MainStacksRoutes() {
           headerBackTitle: "Voltar",
           headerTitleAlign: "center",
           headerShadowVisible: false,
-          headerStyle: {
-            backgroundColor: "#F2F2F2",
-          },
-          headerTintColor: "#333",
-          headerTitleStyle: {
-            fontWeight: "bold",
-          },
+        }}
+      />
+      <MainStack.Screen
+        name="Pedidos"
+        component={Pedidos}
+        options={{
+          headerTitle: "Meus Pedidos",
+          headerBackTitle: "Voltar",
+          headerTitleAlign: "center",
+          headerShadowVisible: false,
         }}
       />
     </MainStack.Navigator>
