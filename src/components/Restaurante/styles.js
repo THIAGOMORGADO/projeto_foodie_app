@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
   logotipo: {
     width: 80,
     height: 80,
+    borderRadius: 10,
   },
   title: {
     flex: 1,
