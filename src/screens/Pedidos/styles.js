@@ -4,7 +4,7 @@ import { COLORS, FONT_SIZE } from "../../global/theme";
 export const styles = StyleSheet.create({
   conteiner: {
     flex: 1,
-    backgroundColor: "#F5F5F5",
+    backgroundColor: COLORS.white,
     padding: 12,
   },
   emptyContainer: {
