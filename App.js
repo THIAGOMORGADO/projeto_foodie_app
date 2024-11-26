@@ -1,8 +1,11 @@
 import { Routes } from "./src/routes/index.jsx";
-import { Login } from "./src/screens/SignIn/index.jsx";
-import { Registro } from "./src/screens/SignUp/index.jsx";
-import { Registro2 } from "./src/screens/SignUp2/index.jsx";
+
+import AuthRoutes from "./src/routes/RoutesAuth/index.jsx";
+
+import Buscar from "./src/screens/Busca";
 
 export default function App() {
-  return <Routes />;
+  const userAuth = false;
+
+  return <>{userAuth ? <AuthRoutes /> : <Routes />}</>;
 }

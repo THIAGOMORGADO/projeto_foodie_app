@@ -5,13 +5,14 @@ import { Registro2 } from "../../screens/SignUp2";
 import Home from "../../screens/Home";
 import Favorites from "../../screens/Favorites";
 import Pedidos from "../../screens/Pedidos";
+import Buscar from "../../screens/Busca";
 
 const MainStack = createNativeStackNavigator();
 
 export default function MainStacksRoutes() {
   return (
     <MainStack.Navigator
-      initialRouteName="Pedidos"
+      initialRouteName="Buscar"
       headerMode="screen"
       backButtonEnabled={false}
       screenOptions={{
@@ -66,6 +67,26 @@ export default function MainStacksRoutes() {
           headerBackTitle: "Voltar",
           headerTitleAlign: "center",
           headerShadowVisible: false,
+        }}
+      />
+      <MainStack.Screen
+        name="Perfil"
+        component={Pedidos}
+        options={{
+          headerTitle: "Meus Pedidos",
+          headerBackTitle: "Voltar",
+          headerTitleAlign: "center",
+          headerShadowVisible: false,
+        }}
+      />
+      <MainStack.Screen
+        name="Buscar"
+        component={Buscar}
+        options={{
+          headerShadowVisible: false,
+          title: "Resultado da busca",
+          headerBackTitle: "Voltar",
+          headerTitleAlign: "center",
         }}
       />
     </MainStack.Navigator>

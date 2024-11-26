@@ -5,7 +5,8 @@ export const styles = StyleSheet.create({
   conteiner: {
     flex: 1,
     backgroundColor: "#F5F5F5",
-    padding: 12,
+    paddingLeft: 12,
+    paddingRight: 12,
   },
   emptyContainer: {
     flexGrow: 1,
