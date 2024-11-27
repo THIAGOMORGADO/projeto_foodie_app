@@ -6,6 +6,7 @@ import Home from "../../screens/Home";
 import Favorites from "../../screens/Favorites";
 import Pedidos from "../../screens/Pedidos";
 import Buscar from "../../screens/Busca";
+import Cardapio from "../../screens/Cardapio";
 
 const MainStack = createNativeStackNavigator();
 
@@ -19,6 +20,13 @@ export default function MainStacksRoutes() {
         headerShadowVisible: false,
       }}
     >
+      <MainStack.Screen
+        name="Cardapio"
+        component={Cardapio}
+        options={{
+          headerShown: false,
+        }}
+      />
       <MainStack.Screen
         name="Login"
         component={Login}

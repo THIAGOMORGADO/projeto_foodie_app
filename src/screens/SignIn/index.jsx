@@ -22,9 +22,7 @@ export function Login(props) {
   const [password, setPassword] = useState("");
   const navigation = useNavigation();
 
-  function handleLogin() {
-    navigation.navigate("Home");
-  }
+  function handleLogin() {}
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
