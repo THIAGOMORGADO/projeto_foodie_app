@@ -1,101 +1,27 @@
 import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Login } from "../../screens/SignIn";
+import { Registro } from "../../screens/SignUp";
+import { Registro2 } from "../../screens/SignUp2";
+import MainTab from "../../screens/MainTab";
+import Cardapio from "../../screens/Cardapio";
+import Buscar from "../../screens/Busca";
 
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Home from "../../screens/Home";
-import Favorites from "../../screens/Favorites";
-import Pedidos from "../../screens/Pedidos";
-import Perfil from "../../screens/Perfil";
-import icon from "../../constants/icon";
-import { Image } from "react-native";
-
-const Tabs = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function AuthRoutes() {
   return (
     <NavigationContainer>
-      <Tabs.Navigator
+      <Stack.Navigator
+        headerMode="none"
         screenOptions={{
-          tabBarShowLabel: false,
-
-          headerShadowVisible: false,
+          headerShown: false,
         }}
       >
-        <Tabs.Screen
-          name="Home"
-          component={Home}
-          options={{
-            headerShown: false,
-            headerTitleAlign: "center",
-            tabBarIcon: ({ focused }) => (
-              <Image
-                source={icon.AbaHome}
-                style={{
-                  width: 25,
-                  height: 25,
-                  opacity: focused ? 1 : 0.3,
-                }}
-              />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="Favoritos"
-          component={Favorites}
-          options={{
-            title: "Favoritos",
-            headerTitleAlign: "center",
-
-            tabBarIcon: ({ focused }) => (
-              <Image
-                source={icon.AbaFavoritos}
-                style={{
-                  width: 25,
-                  height: 25,
-                  opacity: focused ? 1 : 0.3,
-                }}
-              />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="Pedidos"
-          component={Pedidos}
-          options={{
-            title: "Pedidos",
-            headerTitleAlign: "center",
-
-            tabBarIcon: ({ focused }) => (
-              <Image
-                source={icon.AbaPedidos}
-                style={{
-                  width: 25,
-                  height: 25,
-                  opacity: focused ? 1 : 0.3,
-                }}
-              />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="Perfil"
-          component={Perfil}
-          options={{
-            title: "Perfil",
-            headerTitleAlign: "center",
-
-            tabBarIcon: ({ focused }) => (
-              <Image
-                source={icon.AbaPerfil}
-                style={{
-                  width: 25,
-                  height: 25,
-                  opacity: focused ? 1 : 0.3,
-                }}
-              />
-            ),
-          }}
-        />
-      </Tabs.Navigator>
+        <Stack.Screen name="Maintab" component={MainTab} />
+        <Stack.Screen name="Cardapio" component={Cardapio} />
+        <Stack.Screen name="Buscar" component={Buscar} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

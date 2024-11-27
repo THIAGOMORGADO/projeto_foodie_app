@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Text, Image, Touchable, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
-import icon from "../../constants/icon";
+import icon from "../../../constants/icon";
 
-export default function Perfil() {
+export default function TabPerfil() {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={[styles.item, styles.borderTop]}>

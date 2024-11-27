@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, FlatList, Image } from "react-native";
-import { restaurantes } from "../../constants/dados";
-import Restarante from "../../components/Restaurante";
-import icon from "../../constants/icon";
+import { restaurantes } from "../../../constants/dados";
+import Restarante from "../../../components/Restaurante";
+import icon from "../../../constants/icon";
 import { styles } from "./styles";
 
-export default function Favorites() {
+export default function TabFavorites() {
   return (
     <View style={styles.conteiner}>
       <FlatList

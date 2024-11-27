@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text, FlatList, Image } from "react-native";
-import { pedidos } from "../../constants/dados";
+import { pedidos } from "../../../constants/dados";
 
-import icon from "../../constants/icon";
+import icon from "../../../constants/icon";
 import { styles } from "./styles";
-import Pedido from "../../components/Pedido";
+import Pedido from "../../../components/Pedido";
 
-export default function Pedidos() {
+export default function TabPedidos() {
   return (
     <View style={styles.conteiner}>
       <FlatList

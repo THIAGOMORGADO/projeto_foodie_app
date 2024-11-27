@@ -7,7 +7,7 @@ export default function Restarante(props) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={() => props.onPres()}>
       <Image source={props.logotipo} style={styles.logotipo} />
       <View style={styles.title}>
         <Text style={styles.nome}>{props.nome}</Text>
@@ -16,6 +16,6 @@ export default function Restarante(props) {
       <TouchableOpacity>
         <Image source={props.icone} style={styles.favorites} />
       </TouchableOpacity>
-    </View>
+    </TouchableOpacity>
   );
 }

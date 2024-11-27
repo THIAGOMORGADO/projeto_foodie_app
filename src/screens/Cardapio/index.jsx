@@ -5,7 +5,11 @@ import { restaurante } from "../../constants/dados";
 import icon from "../../constants/icon";
 import ProdutoItem from "../../components/ProdutoItem";
 
-export default function Cardapio() {
+export default function Cardapio(props) {
+  function goBack() {
+    props.navigation.goBack();
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.banner}>
@@ -15,7 +19,7 @@ export default function Cardapio() {
           resizeMode="contain"
         />
 
-        <TouchableOpacity style={styles.btnContainer}>
+        <TouchableOpacity style={styles.btnContainer} onPress={goBack}>
           <Image source={icon.Back2} style={styles.back} />
         </TouchableOpacity>
       </View>
