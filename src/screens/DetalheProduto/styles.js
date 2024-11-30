@@ -44,30 +44,41 @@ export const styles = StyleSheet.create({
   taxa: {
     fontSize: FONT_SIZE.md,
     color: COLORS.medium_gray,
+    marginBottom: 5,
   },
-  locationContainer: {
-    width: "100%",
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  locationIcon: {
-    width: 40,
-    height: 40,
-    margin: 10,
-  },
-  locationText: {
-    flex: 1,
-    fontSize: FONT_SIZE.md,
-
-    color: COLORS.dark_gray,
-  },
-  containerProduto: {
-    padding: 10,
-  },
-  produtoText: {
+  valor: {
     fontSize: FONT_SIZE.md,
     fontWeight: "bold",
     color: COLORS.dark_gray,
-    paddingBottom: 2,
+    marginBottom: 5,
+    textAlign: "right",
+  },
+  headerObs: {
+    width: "100%",
+    padding: 10,
+  },
+  textArea: {
+    flex: 1,
+    backgroundColor: COLORS.light_gray,
+    padding: 10,
+    color: COLORS.dark_gray,
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: COLORS.gray,
+    minHeight: 150,
+    textAlignVertical: "top",
+  },
+  footer: {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    flexDirection: "row",
+  },
+  btnQtd: {
+    flexDirection: "row",
+  },
+  imgQtd: {
+    width: 40,
+    height: 40,
   },
 });
